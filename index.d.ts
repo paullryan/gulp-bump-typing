@@ -1,9 +1,14 @@
+// Type definitions for gulp-bump
+// Project: https://github.com/stevelacy/gulp-bump
+// Definitions by: Paul Ryan <https://github.com/paullryan>
+
 declare module "gulp-bump" {
+  import * as through2 from 'through2';
 
   namespace bump {
     interface Bump {
-      (options?: Option): NodeJS.ReadWriteStream;
-      task(options?: Option): () => NodeJS.ReadWriteStream;
+      (options?: Option): any;
+      task(options?: Option): () => any;
     }
     interface Option {
       /**
